@@ -57,23 +57,6 @@ body {
   overflow: auto;
 }
 
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 24px;
-  line-height: 50px;
-  text-align: center;
-  z-index: 9999;
-  cursor: pointer;
-}
-
 #particles {
   position: relative;
   width: 100%;
@@ -207,6 +190,86 @@ p {
   margin-bottom: 30px;
 }
 
+.card {
+  height: 480px;
+  transition: transform 0.3s ease;
+  background-color: #000010;
+  border: 1px solid #292929;
+  border-radius: 8px; /* Optional: Adds rounded corners to the card */
+}
+.card a{
+  text-decoration: none;
+}
+.card-title {
+  color: white; /* Set the text color to white */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.language-logo {
+  width: 50px;
+}
+
+.language-images {
+  margin-top: 10px; 
+}
+.language-images img {
+  margin-right: 10px; 
+}
+.custom-button {
+  background-color: #070747;
+  color: #ffffff;
+}
+
+.footer{
+  background-color: #292929;
+  padding: 10px 0;
+}
+
+#button-to-top {
+  display: inline-block;
+  background-color: #0f1049;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+  z-index: 1000;
+}
+#button-to-top::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button-to-top:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button-to-top:active {
+  background-color: #555;
+}
+#button-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media only screen and (max-width: 1000px) {
   h1 {
     font-size: 15px;
@@ -237,6 +300,33 @@ p {
 
   #about-me p{
     font-size: 15px;
+  }
+
+  .skill-logo {
+    width: 30px;
+    margin: 10px;
+  }
+
+  .card{
+    height: 320px;
+  }
+
+  .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    color: white; /* Set the text color to white */
+    font-size: medium;
+  }
+
+  .language-images img {
+    width: 35px;
+  }
+  
+  .footer p{
+    font-size: small;
   }
   
 }
